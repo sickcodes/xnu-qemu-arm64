@@ -39,12 +39,12 @@
 /* XXX: A lot of this is defined by the standard.
 	But doesn't hurt to ensure Darwin/BSD lengths.
 
-- in_addr_t should be uint32 on all systems:
+- in_addr_t should be uint32 on all systems: */
 typedef unsigned int            in_addr_t;
 struct in_addr {
 	in_addr_t s_addr;
 };
-*/
+
 
 struct darwin_sockaddr {
 	unsigned char	sa_len;
