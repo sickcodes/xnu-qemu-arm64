@@ -177,7 +177,7 @@ int32_t qc_handle_bind(CPUState *cpu, int32_t sckt, struct SOCKADDR *g_addr,
                                     sizeof(addr), 0);
 #endif
         if ((retval = bind(guest_svcs_fds[sckt], (struct sockaddr *) &addr,
-                           addrlen)) < 0) {
+                           addrlen) < 0)) {
             guest_svcs_errno = darwin_error(errno);
         } else {
 #ifndef __APPLE__
